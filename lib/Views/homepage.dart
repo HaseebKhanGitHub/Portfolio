@@ -22,6 +22,18 @@ class Homepage extends StatelessWidget {
                 child: Image.asset("assets/images/flutterLogo.webp"),
               ),
               Row(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(Icons.facebook,color: Colors.blue),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(Icons.,color: Colors.blue),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(Icons.facebook,color: Colors.blue),
+                )
 
               ],)
 
