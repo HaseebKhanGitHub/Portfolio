@@ -19,6 +19,7 @@ class Homepage extends StatelessWidget {
               SizedBox(
                 height: 80,
                 width: 80,
+                child: Image.asset("assets/images/flutterLogo.webp"),
               )
 
           ],)
