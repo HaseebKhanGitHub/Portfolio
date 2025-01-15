@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
@@ -19,7 +16,7 @@ class Homepage extends StatelessWidget {
               SizedBox(
                 height: 80,
                 width: 80,
-                child: Image.asset("assets/images/flutterLogo.webp"),
+               // child: Image.asset("assets/images/test.png"),
               ),
               Row(children: [
                 Padding(
@@ -28,7 +25,7 @@ class Homepage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.,color: Colors.blue),
+                  child: Icon(Icons.facebook,color: Colors.blue),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
