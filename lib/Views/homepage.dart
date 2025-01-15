@@ -8,35 +8,38 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 250,vertical: 30),
-        child: Column(children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                height: 80,
-                width: 80,
-               // child: Image.asset("assets/images/test.png"),
-              ),
-              Row(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.facebook,color: Colors.blue),
+        padding: EdgeInsets.symmetric(horizontal: 250, vertical: 30),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  height: 80,
+                  width: 80,
+                  // child: Image.asset("assets/images/test.png"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.facebook,color: Colors.blue),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Icon(Icons.facebook,color: Colors.blue),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.facebook, color: Colors.blue),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.facebook, color: Colors.blue),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(Icons.facebook, color: Colors.blue),
+                    ),
+                    SizedBox(width: 20),
+                  ],
                 )
-
-              ],)
-
-          ],)
-        ],),
-
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
