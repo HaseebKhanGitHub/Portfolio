@@ -39,7 +39,22 @@ class GradientButton extends StatelessWidget {
                         ? Alignment.bottomCenter
                         : Alignment.centerRight),
                 borderRadius: BorderRadius.circular(5)),
-            child: ElevatedButton(onPressed: onPressed, child: Text(title)),
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Colors.transparent, // make button transparent
+                  shadowColor: Colors.transparent, // remove shadow
+                  shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.circular(5), // match gradient border
+                  ),
+                ),
+                onPressed: onPressed,
+                child: Text(
+                  title,
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w500),
+                )),
           ),
         ),
       ),

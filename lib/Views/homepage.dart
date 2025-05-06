@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/Widgets/Buttons/gradients_buttons.dart';
+import 'package:portfolio/Widgets/Icons/padded_icons.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -21,19 +24,22 @@ class Homepage extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.facebook, color: Colors.blue),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.facebook, color: Colors.blue),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.facebook, color: Colors.blue),
-                    ),
+                    PaddedIcons(
+                        ficon: FontAwesomeIcons.facebook, color: Colors.blue),
+                    PaddedIcons(
+                        ficon: FontAwesomeIcons.twitter, color: Colors.blue),
+                    PaddedIcons(
+                        ficon: FontAwesomeIcons.instagram,
+                        color: Colors.blue),
                     SizedBox(width: 20),
+                    GradientButton(
+                        title: "Download CV",
+                        width: 250,
+                        height: 80,
+                        clr: [Colors.red, Colors.redAccent],
+                        overlayColor: Colors.red,
+                        isGradientVertical: false,
+                        onPressed: () {})
                   ],
                 )
               ],
