@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/Widgets/Cursor/animated_circle_cursor.dart';
 
 class GradientButton extends StatelessWidget {
   final String title;
@@ -21,40 +22,42 @@ class GradientButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: height,
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Card(
-          elevation: 10,
-          child: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: clr,
-                    begin: isGradientVertical
-                        ? Alignment.topCenter
-                        : Alignment.centerLeft,
-                    end: isGradientVertical
-                        ? Alignment.bottomCenter
-                        : Alignment.centerRight),
-                borderRadius: BorderRadius.circular(5)),
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor:
-                      Colors.transparent, // make button transparent
-                  shadowColor: Colors.transparent, // remove shadow
-                  shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.circular(5), // match gradient border
+    return AnimatedCircleCursorMouseRegion(
+      child: Container(
+        width: width,
+        height: height,
+        child: Padding(
+          padding: EdgeInsets.all(10),
+          child: Card(
+            elevation: 10,
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: clr,
+                      begin: isGradientVertical
+                          ? Alignment.topCenter
+                          : Alignment.centerLeft,
+                      end: isGradientVertical
+                          ? Alignment.bottomCenter
+                          : Alignment.centerRight),
+                  borderRadius: BorderRadius.circular(5)),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:
+                        Colors.transparent, // make button transparent
+                    shadowColor: Colors.transparent, // remove shadow
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(5), // match gradient border
+                    ),
                   ),
-                ),
-                onPressed: onPressed,
-                child: Text(
-                  title,
-                  style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.w500),
-                )),
+                  onPressed: onPressed,
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w500),
+                  )),
+            ),
           ),
         ),
       ),
