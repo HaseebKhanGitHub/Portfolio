@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Widgets/Buttons/gradients_buttons.dart';
+import 'package:portfolio/Widgets/Cursor/animated_circle_cursor.dart';
 import 'package:portfolio/Widgets/Icons/padded_icons.dart';
 
 class Homepage extends StatelessWidget {
@@ -17,10 +18,12 @@ class Homepage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                  height: 80,
-                  width: 80,
-                  // child: Image.asset("assets/images/test.png"),
+                AnimatedCircleCursorMouseRegion(
+                  child: SizedBox(
+                    height: 80,
+                    width: 80,
+                    child: Image.asset("assets/images/flutterLogo.webp"),
+                  ),
                 ),
                 Row(
                   children: [
